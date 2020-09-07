@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
-* Студент: [Nikita Nikolaev](https://up.htmlacademy.ru/htmlcss/29/user/1469935).
-* Наставник: `Неизвестно`.
+-   Студент: [Nikita Nikolaev](https://up.htmlacademy.ru/htmlcss/29/user/1469935).
+-   Наставник: [Марина Удовенко](https://htmlacademy.ru/profile/id7570).
 
 ---
 
