@@ -8,7 +8,7 @@
             rel="stylesheet"
         />
         <link
-            href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="./css/normalize.css" />
@@ -18,7 +18,7 @@
     <body>
         <header class="main-head">
             <div class="main-head__top">
-                <a href="" class="logo"
+                <a href="" class="main-head__logo logo"
                     ><img
                         src="https://via.placeholder.com/108x18"
                         width="108"
@@ -71,23 +71,23 @@
 
             <section class="promo">
                 <h2 class="visually-hidden">Промо блок</h2>
-                <article class="promo-card materials">
+                <article class="promo-card promo__materials">
                     <h3 class="promo-card__head">Материалы</h3>
                     <a href="" class="promo-card__link">На любой вкус</a>
                 </article>
-                <article class="promo-card tool">
+                <article class="promo-card promo__tool">
                     <h3 class="promo-card__head">Инструмент</h3>
                     <a href="" class="promo-card__link">На все случаи</a>
                 </article>
-                <article class="promo-card tech">
+                <article class="promo-card promo__tech">
                     <h3 class="promo-card__head">Техника</h3>
                     <a href="" class="promo-card__link">Для стройки</a>
                 </article>
-                <article class="promo-card discount">
+                <article class="promo-card promo__discount">
                     <h3 class="promo-card__head">Скидки 50%</h3>
                     <a href="" class="promo-card__link">на 350 товаров</a>
                 </article>
-                <article class="promo-card shipping">
+                <article class="promo-card promo__shipping">
                     <h3 class="promo-card__head">Доставка</h3>
                     <a href="" class="promo-card__link">Бесплатно</a>
                 </article>
@@ -155,7 +155,7 @@
                         <p class="thing__price thing__price_old"><s>32500 Р.</s></p>
                         <p class="thing__price">25500 Р.</p>
                     </li>
-                    <li>
+                    <li class="thing">
                         <img
                             src="https://via.placeholder.com/184x164"
                             width="184"
@@ -166,7 +166,7 @@
                         <p class="thing__price thing__price_old"><s>22500 Р.</s></p>
                         <p class="thing__price">15500 Р.</p>
                     </li>
-                    <li>
+                    <li class="thing">
                         <img
                             src="https://via.placeholder.com/184x164"
                             width="184"
@@ -177,7 +177,7 @@
                         <p class="thing__price thing__price_old"><s>30500 Р.</s></p>
                         <p class="thing__price">25500 Р.</p>
                     </li>
-                    <li>
+                    <li class="thing">
                         <img
                             src="https://via.placeholder.com/184x164"
                             width="184"
@@ -367,7 +367,7 @@
         </main>
 
         <footer class="main-footer">
-            <div class="main-footer__part1">
+            <div class="main-footer__top">
                 <a href="" class="logo logo_big"
                     ><img
                         src="https://via.placeholder.com/136x22"
@@ -394,18 +394,18 @@
                     <li><a href="">Спецпредложения</a></li>
                 </ul>
             </div>
-            <div class="main-footer__part2">
+            <div class="main-footer__bottom">
                 <p class="main-footer__copyright">
                     &copy;2010–2019 Компания «Техномарт»<br />Все права защищены
                 </p>
-                <article class="main-footer__social">
+                <section class="main-footer__social">
                     <h2 class="visually-hidden">Мы в социальных сетях</h2>
                     <ul class="social-list">
                         <li><a href="">VK</a></li>
                         <li><a href="">Facebook</a></li>
                         <li><a href="">Instagram</a></li>
                     </ul>
-                </article>
+                </section>
                 <p class="main-footer__feedback">
                     Обратная связь:<br />
                     <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>

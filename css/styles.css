@@ -240,23 +240,23 @@ body {
     background-color: rgba(var(--basic-gray-extra-rgb), 0.3);
 }
 
-.promo-card.materials {
+.promo__materials {
     background-color: var(--bgcolor-card-material);
 }
 
-.promo-card.tool {
+.promo__tool {
     background-color: var(--bgcolor-card-tool);
 }
 
-.promo-card.tech {
+.promo__tech {
     background-color: var(--bgcolor-card-tech);
 }
 
-.promo-card.discount {
+.promo__discount {
     background-color: var(--bgcolor-card-discount);
 }
 
-.promo-card.shipping {
+.promo__shipping {
     background-color: var(--bgcolor-card-shipping);
 }
 
@@ -472,7 +472,7 @@ h3.services__heading {
 /* FOOTER SECTION */
 /* =========================== */
 
-.main-footer__part1 {
+.main-footer__top {
     background-color: var(--bgcolor-dark-extra);
     font-weight: normal;
     font-size: 18px;
@@ -523,7 +523,7 @@ h3.services__heading {
     opacity: 0.5;
 }
 
-.main-footer__part2 {
+.main-footer__bottom {
     background-color: var(--bgcolor-dark-main);
     font-weight: normal;
     font-size: 16px;
