@@ -120,13 +120,13 @@
     height: 42px;
 }
 
-.main-head__top .container {
+.main-head__top-container {
     height: 100%;
     display: flex;
     align-items: stretch;
 }
 
-.main-head__top .container > *:not(.logo) {
+.main-head__top-container > *:not(.logo) {
     display: flex;
     align-items: center;
 }
@@ -232,10 +232,13 @@
 .main-head__nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 .main-head__nav li {
-    display: inline-block;
+    flex: 1 1 auto;
+    text-align: center;
 }
 
 .main-head__nav li:hover {
@@ -264,7 +267,7 @@
 /* PROMO SECTION */
 /* =========================== */
 
-.promo .container {
+.promo__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 123px);
@@ -592,7 +595,7 @@ h3.services__heading {
     line-height: 24px;
 }
 
-.main-footer__top .container {
+.main-footer__top-container {
     display: grid;
     grid-template-columns: max-content 1fr;
     grid-template-rows: min-content min-content;
@@ -668,7 +671,7 @@ h3.services__heading {
     color: var(--basic-white);
 }
 
-.main-footer__bottom .container {
+.main-footer__bottom-container {
     display: grid;
     grid-template-columns: auto 1fr min-content min-content;
 }
