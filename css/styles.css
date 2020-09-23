@@ -1,7 +1,9 @@
 :root {
     --basic-white: #fff;
+    --basic-white-half: rgba(255, 255, 255, 0.5);
     --basic-white-rgb: 255, 255, 255;
     --basic-black: #000;
+    --basic-shadow: rgba(0, 0, 0, 0.24);
     --basic-gray: #c5c5c5;
     --basic-gray-rgb: 197, 197, 197;
     --basic-gray-extra: #a9a9a9;
@@ -13,7 +15,6 @@
     --bgcolor-basic: #f1f5f7;
     --bgcolor-extra: #f9f5f0;
 
-    --color-text-rgb: 255, 255, 255;
     --color-general: #ee3643;
     --color-general-hover: #ca2c37;
     --color-general-active: #ba2732;
@@ -34,8 +35,16 @@
 /* Default styles */
 /* =========================== */
 
-body {
+.page {
+    height: 100%;
+}
+
+.page__body {
+    min-height: 100%;
     font-family: "Cuprum", sans-serif;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
 }
 
 /* =========================== */
@@ -45,6 +54,11 @@ body {
 /* =========================== */
 /* Classes for common things */
 /* =========================== */
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+}
 
 .button-extra {
     background-color: var(--bgcolor-button-extra);
@@ -100,9 +114,21 @@ body {
 
 .main-head__top {
     background-color: var(--bgcolor-dark-main);
-    color: rgb(var(--color-text-rgb));
+    color: var(--basic-white);
     font-size: 18px;
     line-height: 24px;
+    height: 42px;
+}
+
+.main-head__top .container {
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+}
+
+.main-head__top .container > *:not(.logo) {
+    display: flex;
+    align-items: center;
 }
 
 .main-head__top a {
@@ -110,13 +136,13 @@ body {
 }
 
 .main-head__top a:visited {
-    color: rgb(var(--color-text-rgb));
+    color: var(--basic-white);
 }
 
 .main-head__bookmarks:active,
 .main-head__shop-cart:active,
 .main-head__order:active {
-    color: rgba(var(--color-text-rgb), 0.5);
+    color: var(--basic-white-half);
 }
 
 .main-head__bookmarks:active,
@@ -125,12 +151,33 @@ body {
 }
 
 .logo {
+    box-sizing: border-box;
+    width: 220px;
+    height: calc(100% + 5px);
+    padding-top: 12px;
+    text-align: center;
     background-color: var(--color-general);
-    box-shadow: inset 0px -5px 0px rgba(var(--color-text-rgb), 0.24);
+    box-shadow: inset 0px -5px 0px var(--basic-shadow);
 }
 
 .logo:active {
     background-color: var(--color-general-active);
+}
+
+.main-head__search {
+    width: 271px;
+}
+
+.main-head__bookmarks,
+.main-head__shop-cart,
+.main-head__order {
+    flex: 1 1 150px;
+    justify-content: center;
+}
+
+.main-head__bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .main-head__text {
@@ -187,6 +234,10 @@ body {
     padding: 0;
 }
 
+.main-head__nav li {
+    display: inline-block;
+}
+
 .main-head__nav li:hover {
     background-color: var(--bgcolor-dark-main);
 }
@@ -212,6 +263,13 @@ body {
 /* =========================== */
 /* PROMO SECTION */
 /* =========================== */
+
+.promo .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 123px);
+    gap: 20px;
+}
 
 .promo-card {
     color: var(--basic-white);
@@ -260,6 +318,18 @@ body {
     background-color: var(--bgcolor-card-shipping);
 }
 
+.promo-slider {
+    grid-row: 2 / -1;
+    grid-column: 1 / -2;
+    overflow: hidden;
+}
+
+.promo-slider ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
 .promo-slider .slide {
     background-color: var(--bgcolor-dark-extra);
     color: var(--basic-white);
@@ -299,7 +369,28 @@ body {
 .pop-things__list {
     list-style-type: none;
     padding: 0;
+    margin: 0;
     font-family: "PT Sans", sans-serif;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 318px;
+    gap: 20px;
+}
+
+.thing {
+    display: grid;
+    grid-template-rows: 2fr repeat(3, min-content);
+    text-align: center;
+}
+
+.thing__img {
+    align-self: center;
+}
+
+.thing__name,
+.thing__price,
+.thing__price_old {
+    margin: 0;
 }
 
 .thing__name {
@@ -344,6 +435,16 @@ body {
 .pop-manufacturer__list {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 145px);
+    gap: 20px;
+}
+
+.pop-manufacturer__list li {
+    align-self: center;
+    justify-self: center;
 }
 
 /* =========================== */
@@ -376,6 +477,7 @@ h3.services__heading {
 .services__controls {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 .services__control {
@@ -413,6 +515,12 @@ h3.services__heading {
     background-color: var(--bgcolor-services-link);
 }
 
+.services__items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
 /* =========================== */
 /* END of SERVICES SECTION */
 /* =========================== */
@@ -420,6 +528,11 @@ h3.services__heading {
 /* =========================== */
 /* ABOUT SECTION */
 /* =========================== */
+
+.sections-about-map {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
 .about__heading {
     font-weight: normal;
@@ -479,9 +592,21 @@ h3.services__heading {
     line-height: 24px;
 }
 
+.main-footer__top .container {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: min-content min-content;
+}
+
+.logo_big {
+    height: 68px;
+}
+
 .main-footer__address {
     font-style: normal;
     color: var(--color-footer);
+    grid-row: 2 / -1;
+    grid-column: 1 / 2;
 }
 
 .main-footer__address a,
@@ -493,6 +618,12 @@ h3.services__heading {
 .main-footer__nav-list {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    justify-self: end;
+}
+
+.main-footer__nav-list li {
+    display: inline-block;
 }
 
 .main-footer__nav-list a,
@@ -504,6 +635,12 @@ h3.services__heading {
 .main-footer__promo-list {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    justify-self: end;
+}
+
+.main-footer__promo-list li {
+    display: inline-block;
 }
 
 .main-footer__promo-list a,
@@ -531,9 +668,16 @@ h3.services__heading {
     color: var(--basic-white);
 }
 
+.main-footer__bottom .container {
+    display: grid;
+    grid-template-columns: auto 1fr min-content min-content;
+}
+
 .social-list {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
 .social-list a,
