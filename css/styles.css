@@ -956,12 +956,24 @@
 /* Styles for Catalog page */
 /*------------------------------------------------------------------------------------------------------------------------------------------------*/
 
+.catalog-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
 /* =========================== */
 /* HEADER SECTION */
 /* =========================== */
 
 .page_catalog .main-head {
     margin-bottom: 0;
+}
+
+.login__name {
+    grid-column: 1 / -1;
+    background-color: var(--basic-white);
 }
 
 .login__name a,
@@ -1005,6 +1017,8 @@
     background-color: var(--bgcolor-catalog-head);
     padding: 29px;
     margin: 0;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
 }
 
 .catalog__button {
@@ -1039,6 +1053,8 @@
     font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
 }
 
 .breadcrumbs__list {
@@ -1064,6 +1080,8 @@
 .filters {
     font-family: "PT Sans", sans-serif;
     font-weight: normal;
+    grid-column: 1 / 2;
+    grid-row: 3 / 5;
 }
 
 .filters__head {
@@ -1114,6 +1132,8 @@
     line-height: 18px;
     text-transform: uppercase;
     background-color: var(--bgcolor-catalog);
+    grid-column: 2 / -1;
+    grid-row: 3 / span 1;
 }
 
 .sort-list {
@@ -1152,6 +1172,11 @@
 /* CATALOG THINGS SECTION */
 /* =========================== */
 
+.things-container {
+    grid-column: 2 / -1;
+    grid-row-start: 4;
+}
+
 .catalog-things {
     grid-template-columns: repeat(3, 1fr);
 }
@@ -1185,6 +1210,8 @@
 
 .things-info {
     background-color: var(--bgcolor-basic);
+    padding-top: 64px;
+    padding-bottom: 68px;
 }
 
 .things-info__heading {
@@ -1193,6 +1220,7 @@
     line-height: 30px;
     text-transform: uppercase;
     margin: 0;
+    margin-bottom: 25px;
 }
 
 .things-info__text {
