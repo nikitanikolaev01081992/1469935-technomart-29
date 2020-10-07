@@ -34,6 +34,8 @@
     --border-color: #eaeaea;
     --border-color-catalog: #e5e5e5;
     --color-sort: #b3b3b3;
+    --font-family-main: "Cuprum", Arial, sans-serif;
+    --font-family-second: "PT Sans", Arial, sans-serif;
 }
 
 /* =========================== */
@@ -47,7 +49,7 @@
 .page__body {
     min-width: 940px;
     min-height: 100%;
-    font-family: "Cuprum", sans-serif;
+    font-family: var(--font-family-main);
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     align-content: start;
@@ -441,7 +443,7 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: var(--font-family-second);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: minmax(318px, auto);
@@ -581,7 +583,7 @@
 .services__text {
     font-size: 13px;
     line-height: 24px;
-    font-family: "PT Sans", sans-serif;
+    font-family: var(--font-family-second);
     margin: 0;
     margin-bottom: 70px;
 }
@@ -662,7 +664,7 @@
 .service__text {
     font-size: 13px;
     line-height: 24px;
-    font-family: "PT Sans", sans-serif;
+    font-family: var(--font-family-second);
     margin: 0;
 }
 
@@ -705,7 +707,7 @@
     font-weight: normal;
     font-size: 13px;
     line-height: 24px;
-    font-family: "PT Sans", sans-serif;
+    font-family: var(--font-family-second);
     margin: 0;
 }
 
@@ -774,7 +776,7 @@
     font-weight: normal;
     font-size: 13px;
     line-height: 24px;
-    font-family: "PT Sans", sans-serif;
+    font-family: var(--font-family-second);
     margin: 0;
     margin-bottom: 32px;
 }
@@ -1043,7 +1045,7 @@
 }
 
 .catalog__button {
-    font-family: "PT Sans", sans-serif;
+    font-family: var(--font-family-second);
     font-weight: normal;
     font-size: 13px;
     line-height: 18px;
@@ -1070,7 +1072,7 @@
 /* =========================== */
 
 .breadcrumbs {
-    font-family: "PT Sans", sans-serif;
+    font-family: var(--font-family-second);
     font-weight: normal;
     font-size: 13px;
     line-height: 18px;
@@ -1111,7 +1113,7 @@
 /* =========================== */
 
 .filters {
-    font-family: "PT Sans", sans-serif;
+    font-family: var(--font-family-second);
     font-weight: normal;
     grid-column: 1 / 2;
     grid-row: 3 / 5;
@@ -1194,7 +1196,7 @@
 /* =========================== */
 
 .sort {
-    font-family: "PT Sans", sans-serif;
+    font-family: var(--font-family-second);
     font-weight: normal;
     font-size: 13px;
     line-height: 18px;
@@ -1207,7 +1209,7 @@
 }
 
 .sort__heading {
-    font-family: "PT Sans", sans-serif;
+    font-family: var(--font-family-second);
     font-weight: normal;
     font-size: 13px;
     line-height: 18px;
@@ -1251,6 +1253,7 @@
 
 .orders-list {
     display: flex;
+    align-items: center;
 }
 
 .orders-list__item + .orders-list__item {
@@ -1260,6 +1263,18 @@
 .orders-list__item label,
 .orders-list__item label:hover {
     border: none;
+}
+
+.orders-arrow:hover path {
+    fill: var(--basic-black);
+}
+
+.sort-list input:checked + .orders-arrow path {
+    fill: var(--color-general);
+}
+
+.orders-arrow__asc {
+    transform: rotate(180deg);
 }
 
 /* =========================== */
@@ -1329,7 +1344,7 @@
 }
 
 .things-info__text {
-    font-family: "PT Sans", sans-serif;
+    font-family: var(--font-family-second);
     font-weight: normal;
     font-size: 13px;
     line-height: 24px;
