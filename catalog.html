@@ -167,7 +167,7 @@
                 </section>
 
                 <section class="sort">
-                    <h2>Сортировка:</h2>
+                    <h2 class="sort__heading">Сортировка:</h2>
                     <section class="sort__params">
                         <h3 class="visually-hidden">Параметры сортировки</h3>
                         <ul class="sort-list params-list">
@@ -177,6 +177,7 @@
                                     name="sort-params"
                                     id="radio-price"
                                     value="price"
+                                    class="visually-hidden"
                                 />
                                 <label for="radio-price">ПО ЦЕНЕ</label>
                             </li>
@@ -186,6 +187,7 @@
                                     name="sort-params"
                                     id="radio-type"
                                     value="type"
+                                    class="visually-hidden"
                                 />
                                 <label for="radio-type">ПО ТИПУ</label>
                             </li>
@@ -195,6 +197,7 @@
                                     name="sort-params"
                                     id="radio-funcionality"
                                     value="funcionality"
+                                    class="visually-hidden"
                                 />
                                 <label for="radio-funcionality">ПО ФУНКЦИОНАЛУ</label>
                             </li>
@@ -209,8 +212,9 @@
                                     name="sort-orders"
                                     id="radio-ascending"
                                     value="ascending"
+                                    class="visually-hidden"
                                 />
-                                <label for="radio-ascending">▲ По возрастанию</label>
+                                <label for="radio-ascending">▲</label>
                             </li>
                             <li class="orders-list__item">
                                 <input
@@ -218,8 +222,9 @@
                                     name="sort-orders"
                                     id="radio-descending"
                                     value="descending"
+                                    class="visually-hidden"
                                 />
-                                <label for="radio-descending">▼ По убыванию</label>
+                                <label for="radio-descending">▼</label>
                             </li>
                         </ul>
                     </section>
@@ -357,10 +362,14 @@
                         </li>
                     </ul>
                     <ul class="page-list">
-                        <li><a class="catalog__button page-number_active">1</a></li>
-                        <li><a class="catalog__button" href="">2</a></li>
-                        <li><a class="catalog__button" href="">3</a></li>
-                        <li><a class="catalog__button" href="">Следующая</a></li>
+                        <li class="page-list__item">
+                            <a class="catalog__button page-number_active">1</a>
+                        </li>
+                        <li class="page-list__item"><a class="catalog__button" href="">2</a></li>
+                        <li class="page-list__item"><a class="catalog__button" href="">3</a></li>
+                        <li class="page-list__item">
+                            <a class="catalog__button" href="">Следующая</a>
+                        </li>
                     </ul>
                 </section>
             </div>
