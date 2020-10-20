@@ -1843,7 +1843,7 @@
     margin-bottom: 16px;
 }
 
-.manufacturers-list__item + .manufacturers-list__item {
+.manufact-item + .manufact-item {
     margin-top: 20px;
 }
 
