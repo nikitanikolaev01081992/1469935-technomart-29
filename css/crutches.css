@@ -1,0 +1,36 @@
+.thing__img[alt="Перфоратор BOSCH BFG 9000"] {
+    position: relative;
+    top: 2px;
+}
+
+.thing__img[alt="Перфоратор BOSCH BFG 3000"],
+.thing__img[alt="Перфоратор BOSCH BFG 6000"],
+.thing__img[alt="Перфоратор BOSCH BFG 2000"] {
+    position: relative;
+    left: -6px;
+}
+
+.manufacturer img[alt="Makita"],
+.manufacturer img[alt="DeWALT"] {
+    position: relative;
+    top: -3px;
+    left: -1px;
+}
+
+.manufacturer img[alt="Интерскол"] {
+    position: relative;
+    top: -1px;
+    left: -1px;
+}
+
+.manufacturer img[alt="Hitachi"] {
+    position: relative;
+    top: 1px;
+    left: 2px;
+}
+
+.manufacturer img[alt="LG"] {
+    position: relative;
+    top: -1px;
+    left: -2px;
+}
