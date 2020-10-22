@@ -1416,6 +1416,10 @@
     padding: 35px 0 29px 0;
 }
 
+.main-footer__bottom p {
+    margin: 0;
+}
+
 .main-footer__bottom-container {
     display: flex;
     justify-content: space-between;
