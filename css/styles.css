@@ -356,7 +356,7 @@
     line-height: 23px;
     margin: 0;
     margin-left: 30px;
-    margin-right: 90px;
+    margin-right: 94px;
 }
 
 .main-head__contacts {
@@ -367,6 +367,7 @@
 }
 
 .main-head__tel {
+    width: 270px;
     color: var(--color-general);
     font-weight: bold;
     font-size: 21px;
@@ -374,7 +375,7 @@
     text-decoration: none;
     box-shadow: inset 3px 3px 0 var(--basic-white), inset -3px -3px 0 var(--basic-white);
     box-sizing: border-box;
-    padding: 8px 46px 8px 40px;
+    padding: 8px 39px 8px 38px;
     display: flex;
     align-items: center;
 }
@@ -403,13 +404,11 @@
     line-height: 21px;
     margin-left: auto;
     display: flex;
-    margin-left: 69px;
 }
 
 .main-head__login_active {
     flex-wrap: wrap;
     width: 299px;
-    margin-left: auto;
 }
 
 .login__link,
@@ -982,6 +981,7 @@
 .manufacturer {
     border: 1px solid var(--border-color);
     box-sizing: border-box;
+    transition: 0.3s;
 }
 
 .manufacturer:hover {
