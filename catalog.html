@@ -72,9 +72,8 @@
                 <div class="main-head__bottom">
                     <p class="main-head__text">
                         <i
-                            >Интернет-магазин<br />
-                            строительных материалов<br />
-                            и инструментов для ремонта</i
+                            >Интернет-магазин строительных материалов и&nbsp;инструментов для
+                            ремонта</i
                         >
                     </p>
                     <div class="main-head__contacts">
@@ -130,14 +129,14 @@
                 </div>
 
                 <nav class="main-head__nav">
-                    <ul>
-                        <li><a href="index.html">Главная</a></li>
-                        <li><a href="">Компания</a></li>
-                        <li><a href="catalog.html">Каталог</a></li>
-                        <li><a href="">Новости</a></li>
-                        <li><a href="">Спецпредложения</a></li>
-                        <li><a href="">Доставка</a></li>
-                        <li><a href="">Контакты</a></li>
+                    <ul class="nav-list">
+                        <li class="nav-list__item"><a href="index.html">Главная</a></li>
+                        <li class="nav-list__item"><a href="">Компания</a></li>
+                        <li class="nav-list__item"><a href="catalog.html">Каталог</a></li>
+                        <li class="nav-list__item"><a href="">Новости</a></li>
+                        <li class="nav-list__item"><a href="">Спецпредложения</a></li>
+                        <li class="nav-list__item"><a href="">Доставка</a></li>
+                        <li class="nav-list__item"><a href="">Контакты</a></li>
                     </ul>
                 </nav>
             </div>
@@ -174,10 +173,12 @@
                                     <div
                                         class="range-controls__toogle toogle-min"
                                         tabindex="0"
+                                        aria-label="Уменьшить минимальное значение диапазона цены для поиска товара"
                                     ></div>
                                     <div
                                         class="range-controls__toogle toogle-max"
                                         tabindex="0"
+                                        aria-label="Увеличить максимальное значение диапазона цены для поиска товара"
                                     ></div>
                                 </div>
                             </div>
@@ -301,7 +302,11 @@
                                 </li>
                             </ul>
                         </section>
-                        <button class="catalog__button filters__submit" type="submit">
+                        <button
+                            class="catalog__button filters__submit"
+                            type="submit"
+                            aria-label="Показать товары, удовлетворяющие заданным фильтрам"
+                        >
                             ПОКАЗАТЬ
                         </button>
                     </form>
@@ -384,7 +389,12 @@
                                     >
                                         Купить
                                     </button>
-                                    <button class="thing__button-bookmark">В закладки</button>
+                                    <button
+                                        class="thing__button-bookmark"
+                                        aria-label="Добавить товар в закладки"
+                                    >
+                                        В закладки
+                                    </button>
                                 </div>
                             </div>
                             <p class="thing__price thing__price_old"><s>30500 Р.</s></p>
@@ -582,16 +592,35 @@
                     </ul>
                     <ul class="page-list">
                         <li class="page-list__item">
-                            <a class="catalog__button page-number page-number_active">1</a>
+                            <a
+                                class="catalog__button page-number page-number_active"
+                                aria-label="Страница каталога №1"
+                                >1</a
+                            >
                         </li>
                         <li class="page-list__item">
-                            <a class="page-number catalog__button" href="">2</a>
+                            <a
+                                class="page-number catalog__button"
+                                href=""
+                                aria-label="Страница каталога №2"
+                                >2</a
+                            >
                         </li>
                         <li class="page-list__item">
-                            <a class="page-number catalog__button" href="">3</a>
+                            <a
+                                class="page-number catalog__button"
+                                href=""
+                                aria-label="Страница каталога №3"
+                                >3</a
+                            >
                         </li>
                         <li class="page-list__item">
-                            <a class="catalog__button" href="">Следующая</a>
+                            <a
+                                class="catalog__button"
+                                href=""
+                                aria-label="Следующая страница каталога"
+                                >Следующая</a
+                            >
                         </li>
                     </ul>
                 </section>
