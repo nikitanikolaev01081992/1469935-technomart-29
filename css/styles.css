@@ -365,6 +365,7 @@
 }
 
 .main-head__contacts {
+    width: 270px;
     justify-self: center;
     display: flex;
     flex-direction: column;
@@ -389,6 +390,8 @@
     content: "";
     display: inline-block;
     vertical-align: middle;
+    min-width: 19px;
+    min-height: 19px;
     width: 19px;
     height: 19px;
     margin-right: 16.5px;
