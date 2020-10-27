@@ -8,7 +8,8 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/styles.min.css" />
+        <!-- <link rel="stylesheet" href="css/styles.css" /> -->
         <title>HTML Academy: Техномарт</title>
     </head>
     <body class="page__body">
@@ -212,7 +213,7 @@
                         <ul class="promo-slider__indicators slider-indicators">
                             <li class="slider-indicators__item">
                                 <button
-                                    class="slider-indicators__indicator"
+                                    class="slider-indicators__indicator slider-indicators__indicator_active"
                                     type="button"
                                     aria-label="Сделать активным слайд №1"
                                 >
@@ -221,7 +222,7 @@
                             </li>
                             <li class="slider-indicators__item">
                                 <button
-                                    class="slider-indicators__indicator slider-indicators__indicator_active"
+                                    class="slider-indicators__indicator"
                                     type="button"
                                     aria-label="Сделать активным слайд №2"
                                 >
@@ -612,6 +613,7 @@
             </div>
         </footer>
 
+        <!-- Use class 'modal_active' to show thing below -->
         <section class="modal modal-write-us" role="dialog" aria-modal="true">
             <h2 class="visually-hidden">Форма обратной связи</h2>
             <form class="modal-write-us__form" action="https://echo.htmlacademy.ru/" method="post">
@@ -656,6 +658,7 @@
             </form>
         </section>
 
+        <!-- Use class 'modal_active' to show thing below -->
         <section class="modal modal-map" role="application">
             <h2 class="visually-hidden">Интерактивная карта с местоположением магазина</h2>
             <iframe
@@ -673,5 +676,26 @@
                 aria-label="Закрыть модальное окно"
             ></button>
         </section>
+
+        <!-- Use class 'modal_active' to show thing below -->
+        <section class="modal modal-message" role="dialog" aria-modal="true">
+            <h2 class="modal-message__heading">Товар добавлен в корзину!</h2>
+
+            <div class="modal-bottom">
+                <a class="button modal__button modal__link" href="">Оформить заказ</a>
+                <button class="button modal__button modal__continue" type="button">
+                    Продолжить покупки
+                </button>
+            </div>
+
+            <button
+                type="button"
+                class="modal__button-close"
+                aria-label="Закрыть модальное окно"
+            ></button>
+        </section>
+
+        <script src="js/script.min.js"></script>
+        <!-- <script src="js/script.js"></script> -->
     </body>
 </html>
